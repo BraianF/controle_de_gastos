@@ -1,0 +1,52 @@
+<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark" id="gasto" style="display: none" >
+<!--<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark" id="gasto"  >-->
+	<div class="col-md-12 px-0">
+		<h2 class="display-5 font-italic font-weight-bold">Gasto</h2>
+		<p class="lead my-3">É aqui que a mãe chora e o filho não vê!</p>
+		<p class="lead my-3">Não chegou nem a metade do mês e você está devendo até as calças! Tsc, tsc... Que vergonha.</p>
+		<form action="#" method="POST" id="formGasto">
+			<div class="form-group">
+				<div class="input-group mb-2">
+					<div class="input-group-prepend">
+						<div class="input-group-text">Tipo de Gasto</div>
+					</div>
+					<label class="sr-only" for="formGastoTipoGasto">Qual é o tipo de gasto?</label>
+					<select id="formGastoTipoGasto" class="custom-select" name="tipoDeGasto" required>
+					</select>
+				</div>
+				<div class="alert alert-danger" id="alertaOpcoesTipoDeGasto" role="alert" style="display: none">
+					Ops! Parece que não tem tipos de gastos cadastrados! Corre lá e cadastra um!
+				</div>
+				<div class="input-group mb-2">
+					<div class="input-group-prepend">
+						<div class="input-group-text">Data</div>
+					</div>
+					<label class="sr-only" for="formGastoDataGasto">Quando foi?</label>
+					<input type="date" id="formGastoDataGasto" class="form-control" name="dataDoGasto" placeholder="Quando foi?" required>
+				</div>
+				<div class="input-group mb-2">
+					<div class="input-group-prepend">
+						<div class="input-group-text">Custo</div>
+					</div>
+					<label class="sr-only" for="formGastoCustoGasto">Quanto custou?</label>
+					<input type="number" step="0.01" min="0" id="formGastoCustoGasto" class="form-control" name="custoDoGasto" placeholder="Quanto custou?" required>
+				</div>
+				<div class="input-group mb-2">
+					<div class="input-group-prepend">
+						<div class="input-group-text">Forma de pagamento</div>
+					</div>
+					<label class="sr-only" for="formGastoFormaPagamentoGasto">Qual foi a forma de pagamento?</label>
+					<select id="formGastoFormaPagamentoGasto" class="custom-select" name="tipoDeGasto" required>
+					</select>
+				</div>
+				<div class="alert alert-danger" id="alertaOpcoesFormaPagamento" role="alert" style="display: none">
+					Ops! Parece que não tem formas de pagamento cadastradas! Corre lá e cadastra uma!
+				</div>
+				<div class="input-group mb-2">
+					<input type="submit" value="Enviar" class="btn btn-success ">
+					<input type="reset" value="Limpar" class="btn btn-warning mx-4">
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

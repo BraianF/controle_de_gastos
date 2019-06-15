@@ -1,0 +1,38 @@
+<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark" id="formaDePagamento" style="display: none" >
+	<div class="col-md-12 px-0">
+		<h2 class="display-5 font-italic font-weight-bold">Forma de pagamento</h2>
+		<p class="lead my-3">Quer pagar à vista? À prazo é melhor?</p>
+		<p class="lead my-3">Cartão, dinheiro, cheque, palito de picolé. Escolha o melhor tipo de pagamento para você!</p>
+		<!-- <form action="adicionaFormaDePagamento.php" method="POST"> -->
+		<form action="#" method="POST" id="formFormaDePagamento">
+			<div class="form-group">
+				<div class="input-group mb-2">
+					<div class="input-group-prepend">
+						<div class="input-group-text">Descrição</div>
+					</div>
+					<label class="sr-only" for="formFormaDePagamentoDescricao">Qual forma de pagamento você deseja cadastrar?</label>
+					<input type="text" class="form-control" id="formFormaDePagamentoDescricao" name="descricao" placeholder="Qual forma de pagamento você deseja cadastrar?" required>
+				</div>
+				<div class="input-group mb-2">
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="formFormaDePagamentoRadioAVista" name="avista" class="custom-control-input formFormaDePagamentoRadio" value="1">
+						<label class="custom-control-label input-group-text" for="formFormaDePagamentoRadioAVista">À vista</label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="formFormaDePagamentoRadioAPrazo" name="avista" class="custom-control-input formFormaDePagamentoRadio" value="0">
+						<label class="custom-control-label input-group-text" for="formFormaDePagamentoRadioAPrazo">À prazo</label>
+					</div>
+				</div>
+				<div class="input-group mb-2" id="formFormaDePagamentoCampoPrazo" style="display: none">
+					<label for="formFormaDePagamentoSliderPrazo" class="mx-auto">Em quantas parcelas?</label>
+					<input type="range" name="parcelas" class="custom-range" min="1" max="12" value="1" id="formFormaDePagamentoSliderPrazo">
+					<p>Parcelas: <span id="formFormaDePagamentoTextoPrazo"></span></p>
+				</div>
+				<div class="input-group mb-2">
+					<input type="submit" value="Enviar" class="btn btn-success">
+					<input type="reset" value="Limpar" class="btn btn-warning mx-4">
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
